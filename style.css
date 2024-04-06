@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    background: #001;
+}
+
+.container{
+    width: 130rem;
+    padding: 2rem;
+    margin: 2rem auto 0;
+}
+
+.project_name{
+    background: linear-gradient(#b7f8db , #50a7c2 , #6f86d6);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    animation:  gradient 3s linear infinite;
+    -webkit-animation:  gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+    0% , 100%{ background-position: 0% 50%; }
+    50%{ background-position: 100% 50%;}
+}
+
+input[type="text"] {
+    padding: 1.5rem 2.5rem;
+    font-size: 1.6rem;
+    color: #000;
+    border: none;
+    outline: none;
+    width: 70%;
+    margin: 1rem 1rem 0;
+    border-radius: 0.6rem;
+    -webkit-border-radius: 0.6rem;
+    -moz-border-radius: 0.6rem;
+    -ms-border-radius: 0.6rem;
+    -o-border-radius: 0.6rem;
+}
+
+button.addBtn , 
+button.deleteBtn{
+    background: #38ef7d;
+    color: #000;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+    margin: 0 10px;
+}
+
+button.deleteBtn{
+    background: #dd1818 !important;
+    color: #fff !important;
+}
+
+.tasks{
+    min-height: 6rem;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.task.done{
+    opacity: 0.5;
+}
+
+.task > .del{
+    display: inline-block;
+    background: #a00;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+footer{
+    background: #7FCEC1;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    margin-left: 10px;
+}
+
+@media (max-width: 567px){
+    .container , .task{
+        width: 100%;
+    }
+    input[type="text"]{
+        width: 100% !important;
+    }
+    button.addBtn , button.deleteBtn{
+        display: inline-block;
+        width: 100%;
+        margin: 10px;
+    }
+}
